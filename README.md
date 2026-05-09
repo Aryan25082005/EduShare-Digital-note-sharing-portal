@@ -45,5 +45,3 @@ As part of our academic project journey, we wanted to develop a practical soluti
 This project enhanced our understanding of full-stack web development concepts and gave us practical exposure to designing a real-world educational platform. We also had the opportunity to present our project in front of judges and faculty members, which improved our technical presentation and communication skills.
 
 Proud of what our team achieved together and excited to continue building impactful solutions in the future! 🙌✨
-
-#EduShare #DigitalNotesSharingPortal #WebDevelopment #StudentProject #Innovation #Technology #Teamwork #LearningByBuilding #GTU #ProjectPresentation #LinkedInPost
