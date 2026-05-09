@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - EduShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><i class="fas fa-book-open"></i><h1>EduShare</h1></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="admin.html" id="adminNavLink" class="active admin-nav-link"><i class="fas fa-shield-alt"></i> Admin Panel</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="admin-hero">
+        <div class="container">
+            <h2><i class="fas fa-shield-alt"></i> Admin Dashboard</h2>
+            <p>Manage users, notes, and platform statistics</p>
+        </div>
+    </div>
+
+    <div class="container" style="padding: 2rem 0 4rem;">
+
+        <!-- Stats Row -->
+        <div class="admin-stats-grid">
+            <div class="admin-stat-card">
+                <div class="stat-icon stat-icon-blue"><i class="fas fa-file-alt"></i></div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statNotes">—</span>
+                    <span class="stat-label">Total Notes</span>
+                </div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-icon stat-icon-purple"><i class="fas fa-users"></i></div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statUsers">—</span>
+                    <span class="stat-label">Registered Users</span>
+                </div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-icon stat-icon-green"><i class="fas fa-download"></i></div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statDownloads">—</span>
+                    <span class="stat-label">Total Downloads</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="admin-tabs">
+            <button class="admin-tab-btn active" data-tab="tabUsers"><i class="fas fa-users"></i> User Management</button>
+            <button class="admin-tab-btn" data-tab="tabNotes"><i class="fas fa-file-alt"></i> Notes Management</button>
+            <button class="admin-tab-btn" data-tab="tabSubjects"><i class="fas fa-book"></i> Subject Manager</button>
+        </div>
+
+        <!-- Users Tab -->
+        <div class="admin-tab-pane active" id="tabUsers">
+            <div class="admin-table-card">
+                <div class="admin-table-header">
+                    <h3><i class="fas fa-users"></i> All Users</h3>
+                    <p>Promote students to admin or demote admins back to students.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Branch / Semester</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <tr><td colspan="5" class="table-loading"><div class="spinner"></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes Tab -->
+        <div class="admin-tab-pane" id="tabNotes">
+            <div class="admin-table-card">
+                <div class="admin-table-header">
+                    <h3><i class="fas fa-file-alt"></i> All Notes</h3>
+                    <p>View and delete any note from the platform.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Branch</th>
+                                <th>Semester</th>
+                                <th>Subject</th>
+                                <th>Uploader</th>
+                                <th>Stats</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="notesTableBody">
+                            <tr><td colspan="7" class="table-loading"><div class="spinner"></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject Manager Tab -->
+        <div class="admin-tab-pane" id="tabSubjects">
+            <div class="admin-table-card">
+                <div class="admin-table-header">
+                    <h3><i class="fas fa-book"></i> Subject Manager</h3>
+                    <p>Add, rename, or remove subjects for any branch and semester. Changes save instantly to Firestore for all users.</p>
+                </div>
+                <div style="padding:1.5rem 2rem;">
+                    <div class="subject-selector-row">
+                        <div class="filter-group">
+                            <label for="adminBranchSel">Branch</label>
+                            <select id="adminBranchSel" class="form-control">
+                                <option value="">Select Branch</option>
+                                <option value="it">Information Technology (IT)</option>
+                                <option value="ce">Computer Engineering (CE)</option>
+                                <option value="me">Mechanical Engineering (ME)</option>
+                                <option value="ee">Electrical Engineering (EE)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="adminSemSel">Semester</label>
+                            <select id="adminSemSel" class="form-control">
+                                <option value="">Select Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+                        <div style="display:flex;align-items:flex-end;">
+                            <button class="btn btn-primary" onclick="loadSubjectEditor()"><i class="fas fa-search"></i> Load Subjects</button>
+                        </div>
+                    </div>
+                    <div id="subjectEditorArea" style="margin-top:1.5rem;">
+                        <p style="color:var(--gray);text-align:center;padding:2rem 0;"><i class="fas fa-arrow-up" style="margin-right:6px;"></i>Select a branch and semester above to manage its subjects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="copyright"><p>&copy; 2024 EduShare. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

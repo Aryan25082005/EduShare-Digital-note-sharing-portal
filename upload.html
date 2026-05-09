@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Notes - EduShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>EduShare</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html" class="active">Upload Notes</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <h1 class="section-title">Upload Notes</h1>
+        
+        <div class="form-container">
+            <!-- Instructions Box -->
+            <div style="background: #e7f3ff; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #4361ee;">
+                <h3 style="margin-bottom: 10px; color: #4361ee;"><i class="fas fa-info-circle"></i> How to Upload</h3>
+                <ol style="margin-left: 20px; line-height: 1.8;">
+                    <li>Upload your PDF to <strong>Google Drive</strong> or <strong>Dropbox</strong></li>
+                    <li>Set sharing to <strong>"Anyone with the link can view"</strong></li>
+                    <li>Copy the shareable link</li>
+                    <li>Paste the link below and submit!</li>
+                </ol>
+                <p style="margin-top: 10px; font-size: 0.9em;"><strong>Tip:</strong> For Google Drive, use "Get link" &rarr; "Anyone with the link" &rarr; Copy</p>
+            </div>
+            
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+                    <select class="form-control" id="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ce">Computer Engineering</option>
+                        <option value="me">Mechanical Engineering</option>
+                        <option value="ee">Electrical Engineering</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select class="form-control" id="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select class="form-control" id="subject" required>
+                        <option value="">Select Subject</option>
+                        <!-- Subjects will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="noteTitle">Note Title</label>
+                    <input type="text" class="form-control" id="noteTitle" placeholder="e.g., Complete DSA Notes with Examples" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="noteDescription">Description</label>
+                    <textarea class="form-control" id="noteDescription" rows="3" placeholder="Brief description of the notes..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pdfLink"><i class="fas fa-link"></i> Google Drive / Dropbox Link</label>
+                    <input type="url" class="form-control" id="pdfLink" placeholder="https://drive.google.com/file/d/..." required>
+                    <small style="color: #666; display: block; margin-top: 5px;">
+                        <i class="fas fa-exclamation-circle"></i> Make sure the link is publicly accessible (Anyone with link can view)
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="agreeUpload" required>
+                        <span class="checkmark"></span>
+                        I confirm that these notes are my original work or I have permission to share them
+                    </label>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload Notes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduShare</h3>
+                    <p>A platform for engineering students to share and access study materials across different branches and semesters.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Branches</h3>
+                    <ul>
+                        <li><a href="notes.html?branch=it">Information Technology</a></li>
+                        <li><a href="notes.html?branch=ce">Computer Engineering</a></li>
+                        <li><a href="notes.html?branch=me">Mechanical Engineering</a></li>
+                        <li><a href="notes.html?branch=ee">Electrical Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@edushare.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-map-marker-alt"></i> University Campus, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EduShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

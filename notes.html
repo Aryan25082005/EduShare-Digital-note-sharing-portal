@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Notes - EduShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>EduShare</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html" class="active">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <h1 class="section-title">Browse Notes</h1>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="branchFilter">Branch:</label>
+                <select id="branchFilter" class="form-control">
+                    <option value="all">All Branches</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ce">Computer Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="ee">Electrical Engineering</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="semesterFilter">Semester:</label>
+                <select id="semesterFilter" class="form-control">
+                    <option value="all">All Semesters</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="subjectFilter">Subject:</label>
+                <select id="subjectFilter" class="form-control">
+                    <option value="all">All Subjects</option>
+                    <!-- Subjects will be populated by JavaScript -->
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="sortFilter">Sort By:</label>
+                <select id="sortFilter" class="form-control">
+                    <option value="recent">Most Recent</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="downloads">Most Downloads</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="noteSearch">Search:</label>
+                <input type="text" id="noteSearch" class="form-control" placeholder="Search notes live..."> 
+            </div>
+        </div>
+        
+        <!-- Notes Grid -->
+        <div class="notes-grid" id="notesGrid">
+            <!-- Notes will be populated by JavaScript -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="btn btn-primary" id="loadMoreBtn">Load More Notes</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduShare</h3>
+                    <p>A platform for engineering students to share and access study materials across different branches and semesters.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Branches</h3>
+                    <ul>
+                        <li><a href="notes.html?branch=it">Information Technology</a></li>
+                        <li><a href="notes.html?branch=ce">Computer Engineering</a></li>
+                        <li><a href="notes.html?branch=me">Mechanical Engineering</a></li>
+                        <li><a href="notes.html?branch=ee">Electrical Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@edushare.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-map-marker-alt"></i> University Campus, Education City</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EduShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

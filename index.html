@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduShare - Digital Notes Sharing Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>EduShare</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Share Knowledge, Grow Together</h2>
+                <p>Access and share study materials for IT, Computer, Mechanical, and Electrical engineering branches across all semesters.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for notes, subjects, or topics...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Branches Section -->
+        <section class="branches-section">
+            <h2 class="section-title">Engineering Branches</h2>
+            <div class="branches-grid">
+                <div class="branch-card" onclick="location.href='notes.html?branch=it'">
+                    <div class="branch-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Information Technology</h3>
+                    <p>Notes for all 8 semesters</p>
+                    <div class="branch-stats">
+                        <span><i class="fas fa-file-alt"></i> 245 Notes</span>
+                        <span><i class="fas fa-users"></i> 128 Contributors</span>
+                    </div>
+                </div>
+                <div class="branch-card" onclick="location.href='notes.html?branch=ce'">
+                    <div class="branch-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Computer Engineering</h3>
+                    <p>Notes for all 8 semesters</p>
+                    <div class="branch-stats">
+                        <span><i class="fas fa-file-alt"></i> 312 Notes</span>
+                        <span><i class="fas fa-users"></i> 156 Contributors</span>
+                    </div>
+                </div>
+                <div class="branch-card" onclick="location.href='notes.html?branch=me'">
+                    <div class="branch-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Notes for all 8 semesters</p>
+                    <div class="branch-stats">
+                        <span><i class="fas fa-file-alt"></i> 198 Notes</span>
+                        <span><i class="fas fa-users"></i> 94 Contributors</span>
+                    </div>
+                </div>
+                <div class="branch-card" onclick="location.href='notes.html?branch=ee'">
+                    <div class="branch-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Electrical Engineering</h3>
+                    <p>Notes for all 8 semesters</p>
+                    <div class="branch-stats">
+                        <span><i class="fas fa-file-alt"></i> 187 Notes</span>
+                        <span><i class="fas fa-users"></i> 102 Contributors</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Notes Section -->
+        <section class="notes-section">
+            <h2 class="section-title">Recently Uploaded Notes</h2>
+            <div class="notes-grid">
+                <!-- Note Card 1 -->
+                <div class="note-card">
+                    <div class="note-header">
+                        <h3>Data Structures & Algorithms</h3>
+                        <span class="note-branch it">IT</span>
+                    </div>
+                    <div class="note-body">
+                        <div class="note-meta">
+                            <span>Semester 3</span>
+                            <span class="rating"><i class="fas fa-star"></i> 8.2/10</span>
+                        </div>
+                        <p>Complete notes on DSA with examples and problem solutions. Covers arrays, linked lists, trees, and graphs.</p>
+                        <div class="note-footer">
+                            <div class="uploader">
+                                <i class="fas fa-user"></i>
+                                <span>John Doe</span>
+                            </div>
+                            <div class="note-actions">
+                                <button class="btn btn-primary btn-sm">Download</button>
+                                <button class="btn btn-outline btn-sm">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Note Card 2 -->
+                <div class="note-card">
+                    <div class="note-header">
+                        <h3>Thermodynamics</h3>
+                        <span class="note-branch me">ME</span>
+                    </div>
+                    <div class="note-body">
+                        <div class="note-meta">
+                            <span>Semester 4</span>
+                            <span class="rating"><i class="fas fa-star"></i> 7.8/10</span>
+                        </div>
+                        <p>Comprehensive notes on laws of thermodynamics with diagrams and solved problems.</p>
+                        <div class="note-footer">
+                            <div class="uploader">
+                                <i class="fas fa-user"></i>
+                                <span>Sarah Wilson</span>
+                            </div>
+                            <div class="note-actions">
+                                <button class="btn btn-primary btn-sm">Download</button>
+                                <button class="btn btn-outline btn-sm">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Note Card 3 -->
+                <div class="note-card">
+                    <div class="note-header">
+                        <h3>Digital Electronics</h3>
+                        <span class="note-branch ee">EE</span>
+                    </div>
+                    <div class="note-body">
+                        <div class="note-meta">
+                            <span>Semester 3</span>
+                            <span class="rating"><i class="fas fa-star"></i> 8.5/10</span>
+                        </div>
+                        <p>Notes on logic gates, flip-flops, and digital circuits with practical examples.</p>
+                        <div class="note-footer">
+                            <div class="uploader">
+                                <i class="fas fa-user"></i>
+                                <span>Mike Johnson</span>
+                            </div>
+                            <div class="note-actions">
+                                <button class="btn btn-primary btn-sm">Download</button>
+                                <button class="btn btn-outline btn-sm">Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 5rem 0; margin-top: 3rem;">
+        <div class="container">
+            <!-- Heading -->
+            <div style="text-align:center; margin-bottom:3.5rem;">
+                <h2 style="font-size:2.2rem; font-weight:800; margin-bottom:0.75rem;">About <span style="background:linear-gradient(135deg,#4cc9f0,#4361ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">EduShare</span></h2>
+                <p style="font-size:1.1rem; opacity:0.75; max-width:600px; margin:0 auto;">A student-built platform that makes quality study materials freely accessible to every engineering student.</p>
+                <div style="width:60px;height:4px;background:linear-gradient(90deg,#4361ee,#4cc9f0);border-radius:2px;margin:1.2rem auto 0;"></div>
+            </div>
+
+            <!-- Mission + Vision grid -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-bottom:3.5rem;">
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:2rem; backdrop-filter:blur(6px); transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size:2rem; margin-bottom:1rem;">🎯</div>
+                    <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; color:#4cc9f0;">Our Mission</h3>
+                    <p style="opacity:0.75; font-size:0.93rem; line-height:1.7;">To eliminate information inequality among engineering students by creating a centralised, free hub of peer-reviewed notes for every branch and semester.</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:2rem; backdrop-filter:blur(6px); transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size:2rem; margin-bottom:1rem;">💡</div>
+                    <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; color:#4cc9f0;">Why We Built This</h3>
+                    <p style="opacity:0.75; font-size:0.93rem; line-height:1.7;">Finding reliable notes before exams was always a struggle. EduShare was born out of that frustration — a platform where seniors help juniors and everyone benefits together.</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:2rem; backdrop-filter:blur(6px); transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size:2rem; margin-bottom:1rem;">🔒</div>
+                    <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; color:#4cc9f0;">Quality &amp; Trust</h3>
+                    <p style="opacity:0.75; font-size:0.93rem; line-height:1.7;">Every upload is tagged by branch, semester, and subject. Our admin team reviews flagged content, and the community rating system surfaces the best notes automatically.</p>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div style="text-align:center; margin-bottom:2.5rem;">
+                <h3 style="font-size:1.5rem; font-weight:700; margin-bottom:2rem;">How It Works</h3>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; position:relative;">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+                        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#4361ee,#4cc9f0);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;">1</div>
+                        <p style="font-weight:600; font-size:0.95rem;">Register</p>
+                        <p style="font-size:0.85rem; opacity:0.6;">Create a free account with your college email</p>
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+                        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#7209b7,#4361ee);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;">2</div>
+                        <p style="font-weight:600; font-size:0.95rem;">Browse</p>
+                        <p style="font-size:0.85rem; opacity:0.6;">Filter by branch, semester and subject</p>
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+                        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#f72585,#7209b7);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;">3</div>
+                        <p style="font-weight:600; font-size:0.95rem;">Download &amp; Rate</p>
+                        <p style="font-size:0.85rem; opacity:0.6;">Access notes via Drive link and rate them</p>
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+                        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff9e00,#f72585);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;">4</div>
+                        <p style="font-weight:600; font-size:0.95rem;">Contribute</p>
+                        <p style="font-size:0.85rem; opacity:0.6;">Upload your own notes and help others</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats bar -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-top:3rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:2.5rem; text-align:center;">
+                <div><p style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#4cc9f0,#4361ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">4</p><p style="opacity:0.65; font-size:0.9rem;">Engineering Branches</p></div>
+                <div><p style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#f72585,#7209b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">8</p><p style="opacity:0.65; font-size:0.9rem;">Semesters Covered</p></div>
+                <div><p style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#ff9e00,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">100%</p><p style="opacity:0.65; font-size:0.9rem;">Free Forever</p></div>
+                <div><p style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#4bb543,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">24/7</p><p style="opacity:0.65; font-size:0.9rem;">Always Available</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduShare</h3>
+                    <p>A platform for engineering students to share and access study materials across different branches and semesters.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Browse Notes</a></li>
+                        <li><a href="upload.html">Upload Notes</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Branches</h3>
+                    <ul>
+                        <li><a href="notes.html?branch=it">Information Technology</a></li>
+                        <li><a href="notes.html?branch=ce">Computer Engineering</a></li>
+                        <li><a href="notes.html?branch=me">Mechanical Engineering</a></li>
+                        <li><a href="notes.html?branch=ee">Electrical Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@edushare.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9638961095</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Sal College of Engineering, Ahmedabad</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 EduShare. All rights reserved. Built with ❤️ by engineering students, for engineering students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
